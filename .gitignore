@@ -1,3 +1,22 @@
+# Ignorar archivos de configuración del sistema
 *.log
+.DS_Store        # Archivos de macOS
+Thumbs.db        # Archivos de Windows
+
+# Ignorar dependencias instaladas
 node_modules/
-*.zip
+
+# Ignorar archivos de compilación o producción
+dist/
+build/
+
+# Ignorar archivos de entorno
+.env
+.env.local
+
+# Ignorar archivos temporales
+*.tmp
+*.bak
+
+# Ignorar carpetas específicas
+vendor/
