@@ -1,37 +1,38 @@
-/* Estilos globales */
+/* Estilos globales - Reset básico para márgenes y padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fuentes */
+/* Importación de fuentes desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* Colores */
+/* Variables de color y diseño definidas en :root para uso global */
 :root {
-    --primary-bg: #f5f7fa;        /* Fondo claro y limpio */
-    --secondary-bg: #ffffff;      /* Blanco puro para contraste */
-    --text-color: #333333;        /* Texto oscuro pero suave */
-    --title-color: #4a90e2;       /* Azul agradable para títulos */
-    --link-color: #5a6268;        /* Gris más oscuro para mejor contraste */
-    --link-hover: #4a90e2;        /* Azul al pasar el mouse */
-    --footer-bg: #2d3748;         /* Gris oscuro elegante para footer */
+    --primary-bg: #f5f7fa;        /* Fondo claro */
+    --secondary-bg: #ffffff;      /* Blanco  para contraste */
+    --text-color: #333333;        /* Texto oscuro */
+    --title-color: #4a90e2;       /* Azul  para títulos */
+    --link-color: #5a6268;        /* Gris más oscuro  */
+    --link-hover: #4a90e2;        /* HOVER */
+    --footer-bg: #2d3748;         /* Gris oscuro para footer */
     --shadow: rgba(0, 0, 0, 0.1); /* Sombra suave */
     --transition: 0.3s ease;      /* Transición fluida */
     --accent-color: #48bb78;      /* Verde suave para botones */
     --navbar-height: 60px;        /* Altura del navbar */
 }
 
+/* Estilos básicos del cuerpo */
 body {
     background-color: var(--primary-bg);
     font-family: 'Poppins', sans-serif, Arial;
     color: var(--text-color);
     line-height: 1.6;
-    padding-top: calc(var(--navbar-height) + 10px);
+    padding-top: calc(var(--navbar-height) + 10px); /* Espacio para navbar fijo */
 }
 
-/* Enlace de salto */
+/* Enlace de salto para accesibilidad */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -44,10 +45,10 @@ body {
 }
 
 .skip-link:focus {
-    top: 0;
+    top: 0; /* Visible al recibir foco */
 }
 
-/* Header y Navbar */
+/* Estilos del Header y Navbar */
 .navbar {
     background-color: var(--secondary-bg);
     box-shadow: 0 2px 5px var(--shadow);
@@ -60,12 +61,12 @@ body {
 }
 
 .navbar-brand .logo {
-    max-height: 70px;
+    max-height: 70px; 
     transition: var(--transition);
 }
 
 .navbar-nav {
-    align-items: center;
+    align-items: center; 
 }
 
 .navbar-nav .nav-link {
@@ -95,7 +96,7 @@ body {
 }
 
 .navbar-toggler {
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem; /* Botón móvil más compacto */
 }
 
 /* Contenedor principal */
@@ -105,7 +106,7 @@ body {
     padding: 1rem 1rem;
 }
 
-/* Títulos */
+/* Estilos de títulos */
 .title {
     font-size: clamp(2rem, 5vw, 2.5rem);
     color: var(--title-color);
@@ -128,7 +129,7 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
-/* Texto intro */
+/* Texto introductorio */
 .intro-text {
     font-size: 1.1rem;
     text-align: center;
@@ -159,7 +160,7 @@ h3 {
 
 .cta-button:hover {
     background-color: #38a169;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Efecto de elevación */
 }
 
 /* Sección de servicios */
@@ -204,7 +205,7 @@ h3 {
     color: var(--title-color);
 }
 
-/* Cards genéricas */
+/* Estilos de cards genéricas */
 .card {
     background-color: var(--secondary-bg);
     padding: 1.5rem;
@@ -214,7 +215,7 @@ h3 {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efecto de elevación */
     box-shadow: 0 6px 12px var(--shadow);
 }
 
@@ -310,7 +311,7 @@ h3 {
 }
 
 .gallery-img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto de zoom */
 }
 
 figcaption {
@@ -366,7 +367,7 @@ footer h4 {
     font-size: 0.9rem;
 }
 
-/* Responsividad para pantallas pequeñas */
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
     :root {
         --navbar-height: 55px;
@@ -404,7 +405,7 @@ footer h4 {
     
     .content-grid,
     .gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
 
     .welcome-section,
@@ -453,10 +454,10 @@ footer h4 {
     }
 }
 
-/* Media Query para 2K (min-width: 1921px) */
+/* Media Query para pantallas 2K */
 @media (min-width: 1921px) {
     :root {
-        --navbar-height: 80px; /* Más altura para el navbar */
+        --navbar-height: 80px;
     }
 
     body {
@@ -464,15 +465,15 @@ footer h4 {
     }
 
     .navbar-brand .logo {
-        max-height: 70px; /* Ícono más grande para 2K */
+        max-height: 70px;
     }
 
     .container {
-        max-width: 1600px; /* Contenedor más ancho */
+        max-width: 1600px;
     }
 
     .title {
-        font-size: clamp(2.5rem, 5vw, 3rem); /* Títulos más grandes */
+        font-size: clamp(2.5rem, 5vw, 3rem);
     }
 
     h2 {
@@ -494,7 +495,7 @@ footer h4 {
     }
 
     .content-grid {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Columnas más anchas */
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 3rem;
     }
 
@@ -504,7 +505,7 @@ footer h4 {
     }
 
     .card-img {
-        max-height: 250px; /* Imágenes más grandes en cards */
+        max-height: 250px;
     }
 
     .social-links img {
@@ -513,10 +514,10 @@ footer h4 {
     }
 }
 
-/* Media Query para 4K (min-width: 2561px) */
+/* Media Query para pantallas 4K */
 @media (min-width: 2561px) {
     :root {
-        --navbar-height: 100px; /* Mayor altura para 4K */
+        --navbar-height: 100px;
     }
 
     body {
@@ -524,15 +525,15 @@ footer h4 {
     }
 
     .navbar-brand .logo {
-        max-height: 90px; /* Ícono aún más grande para 4K */
+        max-height: 90px;
     }
 
     .container {
-        max-width: 2000px; /* Contenedor más ancho para 4K */
+        max-width: 2000px;
     }
 
     .title {
-        font-size: clamp(3rem, 5vw, 4rem); /* Títulos aún más grandes */
+        font-size: clamp(3rem, 5vw, 4rem);
     }
 
     h2 {
@@ -554,7 +555,7 @@ footer h4 {
     }
 
     .content-grid {
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Columnas más anchas */
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         gap: 4rem;
     }
 
@@ -564,7 +565,7 @@ footer h4 {
     }
 
     .card-img {
-        max-height: 300px; /* Imágenes más grandes en cards */
+        max-height: 300px;
     }
 
     .social-links img {
