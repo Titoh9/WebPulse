@@ -1,3 +1,6 @@
+/* Importación de fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 /* Estilos globales - Reset básico para márgenes y padding */
 * {
     margin: 0;
@@ -5,8 +8,6 @@
     box-sizing: border-box;
 }
 
-/* Importación de fuentes desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* Variables de color y diseño definidas en :root para uso global */
 :root {
@@ -370,7 +371,7 @@ footer h4 {
 /* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
     :root {
-        --navbar-height: 55px;
+        --navbar-height: 10vh;
     }
 
     body {
@@ -384,13 +385,80 @@ footer h4 {
     h2 {
         font-size: 1.5rem;
     }
-    
+    .navbar-collapse{
+        background-color: var(--secondary-bg);    
+        padding: 1rem;
+        margin-top: 0.3rem;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 2px 5px var(--shadow);
+        max-height: 80vh;
+        overflow-y: auto;
+    }
     .intro-text {
         font-size: 1rem;
     }
     
     .navbar-brand .logo {
-        max-height: 40px;
+        max-height: 5vh;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+        padding: 0.4rem 0.6rem;
+    }
+    
+    .social-links img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .content-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section,
+    .services-section,
+    .benefits-section {
+        padding: 1.5rem 0;
+    }
+
+    footer {
+        padding: 1.5rem 0;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --navbar-height: 10vh;
+    }
+
+    body {
+        padding-top: calc(var(--navbar-height) + 10px);
+    }
+
+    .title {
+        font-size: clamp(1.75rem, 4vw, 2rem);
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    .navbar-collapse{
+        background-color: var(--secondary-bg);    
+        padding: 1rem;
+        margin-top: 0.3rem;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 2px 5px var(--shadow);
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    .intro-text {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand .logo {
+        max-height: 5vh;
     }
     
     .navbar-nav .nav-link {
@@ -408,24 +476,14 @@ footer h4 {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
 
-    .welcome-section,
-    .services-section,
-    .benefits-section {
-        padding: 1.5rem 0;
-    }
-
-    footer {
-        padding: 1.5rem 0;
-    }
-}
-
 @media (max-width: 576px) {
     :root {
-        --navbar-height: 50px;
-    }
+        --navbar-height: 10vh;
 
+    }
+    
     body {
-        padding-top: calc(var(--navbar-height) + 10px);
+        padding-top: calc(var(--navbar-height) + 0.1vh);
     }
 
     .title {
@@ -436,13 +494,23 @@ footer h4 {
         font-size: 1.25rem;
     }
     
-    .navbar-nav .nav-link {
+    .navbar-nav .nav-link  {
         font-size: clamp(0.75rem, 1.5vw, 0.85rem);
         padding: 0.3rem 0.5rem;
     }
-    
+
+    .navbar-collapse{
+        background-color: var(--secondary-bg);    
+        padding: 1rem;
+        margin-top: 0.3rem;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 2px 5px var(--shadow);
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
     .navbar-brand .logo {
-        max-height: 30px;
+        max-height: 5vh;
     }
     
     .contact-form {
@@ -453,6 +521,7 @@ footer h4 {
         font-size: 1rem;
     }
 }
+
 
 /* Media Query para pantallas 2K */
 @media (min-width: 1921px) {
@@ -465,7 +534,7 @@ footer h4 {
     }
 
     .navbar-brand .logo {
-        max-height: 70px;
+        max-height: 10vh;
     }
 
     .container {
@@ -578,4 +647,4 @@ footer h4 {
         padding: 1rem 2rem;
         font-size: 1.25rem;
     }
-}
+}}
