@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px v.$shadow;
+  @include m.transition;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}

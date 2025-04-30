@@ -1,0 +1,22 @@
+// main.scss
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+@use 'base/reset';
+@use 'base/typography';
+
+@use 'components/buttons';
+@use 'components/card';
+@use 'components/gallery';
+
+@use 'layout/navigation';
+@use 'layout/grid';
+@use 'layout/footer';
+@use 'layout/forms';
+
+@import 'pages/index';
+@import 'pages/contact';
+@import 'pages/about';
+@import 'pages/services';
+@import 'pages/galeria';
+@import 'pages/blog';

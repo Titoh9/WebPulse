@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as v;
+
+.benefits-list {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+
+  li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  strong {
+    color: v.$title-color;
+  }
+}
+
+.additional-info {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .benefits-list li {
+    font-size: 1rem;
+  }
+}

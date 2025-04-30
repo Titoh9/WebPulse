@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as v;
+
+.intro-text {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.additional-info {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  .intro-text {
+    font-size: 1.25rem;
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 2561px) {
+  .intro-text {
+    font-size: 1.5rem;
+    max-width: 1200px;
+  }
+}
